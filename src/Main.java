@@ -22,7 +22,7 @@ public class Main {
         payroll.printPayroll();
 
         // Print attendance
-        System.out.println("Attendance Records:");
+        System.out.println("\nAttendance Records:");
         System.out.println("Alice's Attendance: ");
         for (String date : attendance.getAttendance(emp1.employeeId)) {
             System.out.println(date);

@@ -19,8 +19,7 @@ class Payroll {
     public void printPayroll() {
         System.out.println("Payroll:");
         for (int i = 0; i < size; i++) {
-            System.out.printf("Employee ID: %s, Name: %s, Salary: %.2f%n",
-                    employees[i].employeeId, employees[i].name, employees[i].calculateSalary());
+            System.out.printf("\nEmployee ID: " + employees[i].employeeId + " , Name: " + employees[i].name +" , Salary: " + employees[i].calculateSalary());
         }
     }
 }
