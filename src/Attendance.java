@@ -8,7 +8,7 @@ class Attendance {
     public Attendance(int capacity) {
         this.capacity = capacity;
         employeeIds = new String[capacity];
-        attendanceRecords = new String[capacity][30]; // Assuming max 30 days of attendance
+        attendanceRecords = new String[capacity][30]; // max 30 days of attendance
         attendanceCounts = new int[capacity];
         size = 0;
     }

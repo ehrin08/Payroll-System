@@ -8,6 +8,6 @@ class Employee {
     }
 
     public double calculateSalary() {
-        return 0; // Default implementation
+        return 0; // Default
     }
 }
