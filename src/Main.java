@@ -7,7 +7,7 @@ public class Main {
 
         // Create employees
         Employee emp1 = new FullTimeEmployee("John", "F001", 5000);
-        Employee emp2 = new PartTimeEmployee("Doe", "P001", 65, 100);
+        Employee emp2 = new PartTimeEmployee("Doe", "P001", 65, 45);
 
         // Add employees to payroll
         payroll.addEmployee(emp1);
