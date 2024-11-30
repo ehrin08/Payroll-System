@@ -1,36 +1,70 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Create Payroll and Attendance with a capacity of 10 employees
-        Payroll payroll = new Payroll(10);
-        Attendance attendance = new Attendance(10);
+        Scanner scanner = new Scanner(System.in);
+        EmployeeManager manager = new EmployeeManager();
+        Management management = new Management(manager);  // Pass the manager here
+        Misc misc = new Misc();
 
-        // Create employees
-        Employee emp1 = new FullTimeEmployee("John", "F001", 5000);
-        Employee emp2 = new PartTimeEmployee("Doe", "P001", 65, 45);
+        String id, passcode = "3", name;
 
-        // Add employees to payroll
-        payroll.addEmployee(emp1);
-        payroll.addEmployee(emp2);
+        while (true) {
+            System.out.println("\nEmployee Attendance Management and Payroll System");
+            System.out.println("[1] Check-In");
+            System.out.println("[2] Check-Out");
+            System.out.println("[3] Management");
 
-        // Mark attendance
-        attendance.markAttendance(emp1.employeeId, "2023-10-01");
-        attendance.markAttendance(emp1.employeeId, "2023-10-02");
-        attendance.markAttendance(emp2.employeeId, "2023-10-01");
+            System.out.print(" > ");
+            char choice = scanner.next().charAt(0);
 
-        // Print payroll
-        payroll.printPayroll();
+            scanner.nextLine(); // For auto scan error
 
-        // Print attendance
-        System.out.println("\nAttendance Records:");
-        System.out.println("Alice's Attendance: ");
-        for (String date : attendance.getAttendance(emp1.employeeId)) {
-            System.out.println(date);
-        }
-        System.out.println("Bob's Attendance: ");
-        for (String date : attendance.getAttendance(emp2 .employeeId)) {
-            System.out.println(date);
+            switch (choice) {
+                case '1':
+                    System.out.print("Enter Employee ID to mark Time In: ");
+                    id = scanner.nextLine();
+
+                    Employee employeeIn = manager.getEmployeeById(id);
+
+                    if (employeeIn != null) {
+                        employeeIn.markTimeIn(); // Direct method call
+                    } else {
+                        System.out.println("Employee not found.");
+                    }
+
+                    break;
+
+                case '2':
+                    System.out.print("Enter Employee ID to mark Time Out: ");
+                    id = scanner.nextLine();
+
+                    Employee employeeOut = manager.getEmployeeById(id);
+
+                    if (employeeOut != null) {
+                        employeeOut.markTimeOut(); // Direct method call
+                    } else {
+                        System.out.println("Employee not found.");
+                    }
+
+                    break;
+
+                case '3':
+                    System.out.print("Please enter passcode: ");
+                    passcode = scanner.nextLine();
+
+                    if (passcode.equals("admin")) {
+                        management.managementScr();  // Management now uses the same manager instance
+                    } else {
+                        System.out.println("Incorrect Passcode!");
+                    }
+
+                    break;
+
+                default:
+                    misc.clearScreen();
+                    System.out.println("Invalid Choice!");
+            }
         }
     }
-
 }
