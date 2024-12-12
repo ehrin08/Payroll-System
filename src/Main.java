@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // Input
+        // Creating instances of EmployeeManager, Management, and Misc
         EmployeeManager manager = new EmployeeManager();
         Management management = new Management(manager);  // Pass the manager here
         Misc misc = new Misc();
-
 
         String id, passcode = "1";
 
@@ -35,6 +35,7 @@ public class Main {
                     }
 
                     misc.pauseScreen();
+                    misc.clearScreen();
                     break;
 
                 case '2': // Time out
@@ -50,6 +51,7 @@ public class Main {
                     }
 
                     misc.pauseScreen();
+                    misc.clearScreen();
                     break;
 
                 case '3': // Go to management
@@ -63,11 +65,14 @@ public class Main {
                     }
 
                     misc.pauseScreen();
+                    misc.clearScreen();
                     break;
 
                 default:
-                    misc.clearScreen();
+
                     System.out.println("Invalid Choice!");
+                    misc.pauseScreen();
+                    misc.clearScreen();
             }
         }
     }

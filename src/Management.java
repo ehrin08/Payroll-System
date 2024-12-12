@@ -12,16 +12,14 @@ public class Management {
         Misc misc = new Misc();
 
         // Default employees
-        manage.addEmployee(new EmployeePayroll("001", "Aliyah C. Calanoc"));
-        manage.addEmployee(new EmployeePayroll("002", "King Andrei D. Carandang"));
-        manage.addEmployee(new EmployeePayroll("003", "Rochelle D. Castillo"));
-        manage.addEmployee(new EmployeePayroll("004", "Ralph Joedel E. Fonte"));
+//        manage.addEmployee(new EmployeePayroll("001", "Aliyah C. Calanoc"));
+//        manage.addEmployee(new EmployeePayroll("002", "King Andrei D. Carandang"));
+//        manage.addEmployee(new EmployeePayroll("003", "Rochelle D. Castillo"));
+//        manage.addEmployee(new EmployeePayroll("004", "Ralph Joedel E. Fonte"));
 
         String id, name;
-        double rate;
 
         while (true) {
-            misc.clearScreen();
 
             System.out.println("Management");
             System.out.println("[1] Add Employee");
@@ -104,9 +102,6 @@ public class Management {
 
                 case '6':
                     System.out.println("Logging Out...");
-                    misc.pauseScreen();
-                    misc.clearScreen();
-
                     return;
 
                 default:
