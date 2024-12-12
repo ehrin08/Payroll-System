@@ -30,4 +30,8 @@ public class EmployeeManager {
         }
         return null;
     }
+
+    public ArrayList<Employee> getAllEmployees() {
+        return employees;
+    }
 }

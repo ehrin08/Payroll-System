@@ -7,7 +7,8 @@ public class Main {
         Management management = new Management(manager);  // Pass the manager here
         Misc misc = new Misc();
 
-        String id, passcode = "3", name;
+
+        String id, passcode = "1";
 
         while (true) {
             System.out.println("\nEmployee Attendance Management and Payroll System");
@@ -33,6 +34,7 @@ public class Main {
                         System.out.println("Employee not found.");
                     }
 
+                    misc.pauseScreen();
                     break;
 
                 case '2':
@@ -47,6 +49,7 @@ public class Main {
                         System.out.println("Employee not found.");
                     }
 
+                    misc.pauseScreen();
                     break;
 
                 case '3':
@@ -59,6 +62,7 @@ public class Main {
                         System.out.println("Incorrect Passcode!");
                     }
 
+                    misc.pauseScreen();
                     break;
 
                 default:

@@ -3,7 +3,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 class EmployeeAttendance extends Employee {
-    private String[][][] attendance; // [Day][TimeIn/Out][HH/MM]
+    String[][][] attendance; // [Day][TimeIn/Out][HH/MM]
 
     public EmployeeAttendance(String id, String name) {
         super(id, name);
