@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public class Misc {
-    // Clears the screen (if implemented)
+    // Clears the screen
     public void clearScreen() {
         System.out.println("\n\n\n\n\n\n");
     }

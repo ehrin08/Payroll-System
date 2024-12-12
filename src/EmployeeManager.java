@@ -31,6 +31,7 @@ public class EmployeeManager {
         return null;
     }
 
+    // Return all attendance
     public ArrayList<Employee> getAllEmployees() {
         return employees;
     }

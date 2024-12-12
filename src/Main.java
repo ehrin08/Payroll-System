@@ -22,7 +22,7 @@ public class Main {
             scanner.nextLine(); // For auto scan error
 
             switch (choice) {
-                case '1':
+                case '1': // Time in
                     System.out.print("Enter Employee ID to mark Time In: ");
                     id = scanner.nextLine();
 
@@ -37,7 +37,7 @@ public class Main {
                     misc.pauseScreen();
                     break;
 
-                case '2':
+                case '2': // Time out
                     System.out.print("Enter Employee ID to mark Time Out: ");
                     id = scanner.nextLine();
 
@@ -52,7 +52,7 @@ public class Main {
                     misc.pauseScreen();
                     break;
 
-                case '3':
+                case '3': // Go to management
                     System.out.print("Please enter passcode: ");
                     passcode = scanner.nextLine();
 

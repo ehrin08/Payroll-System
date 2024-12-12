@@ -3,8 +3,6 @@ import java.util.Scanner;
 public class Management {
     private EmployeeManager manage;
 
-
-
     public Management(EmployeeManager manager) {
         this.manage = manager;  // Set the manager instance passed from Main
     }
@@ -13,6 +11,7 @@ public class Management {
         Scanner scanner = new Scanner(System.in);
         Misc misc = new Misc();
 
+        // Default employees
         manage.addEmployee(new EmployeePayroll("001", "Aliyah C. Calanoc"));
         manage.addEmployee(new EmployeePayroll("002", "King Andrei D. Carandang"));
         manage.addEmployee(new EmployeePayroll("003", "Rochelle D. Castillo"));
@@ -38,7 +37,7 @@ public class Management {
             scanner.nextLine();
 
             switch (choice) {
-                case '1':
+                case '1': // Add employee
                     System.out.print("Enter Employee ID: ");
                     id = scanner.nextLine();
 
@@ -51,7 +50,7 @@ public class Management {
                     misc.clearScreen();
                     break;
 
-                case '2':
+                case '2': // Delete employee thru ID
                     System.out.print("Enter Employee ID to delete: ");
                     id = scanner.nextLine();
 
@@ -60,7 +59,7 @@ public class Management {
                     misc.clearScreen();
                     break;
 
-                case '3':
+                case '3': // Check attendance
                     System.out.print("Enter Employee ID to check attendance: ");
                     id = scanner.nextLine();
 
@@ -84,7 +83,7 @@ public class Management {
                     misc.clearScreen();
                     break;
 
-                case '5':
+                case '5': // Generate and export payslip thru txt file
                     System.out.print("Enter Employee ID to generate payslip: ");
                     id = scanner.nextLine();
 
